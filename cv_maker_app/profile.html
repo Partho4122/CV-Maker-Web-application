@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 text-center">
+    <h2>Profile Information</h2>
+    <img id="profilePicture" class="profile-picture" alt="Profile Picture">
+    <p><strong>Full Name:</strong> <span id="fullname"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+    <p><strong>Address:</strong> <span id="address"></span></p>
+    <a href="registration.html" class="btn btn-info">Edit Profile</a>
+    <a href="edit_profile.php" class="btn btn-warning">Edit Profile</a>
+
+</div>
+
+<script>
+    // Load profile data from localStorage
+    const profileData = JSON.parse(localStorage.getItem('profileData'));
+
+    if (profileData) {
+        document.getElementById('fullname').textContent = profileData.fullname;
+        document.getElementById('email').textContent = profileData.email;
+        document.getElementById('phone').textContent = profileData.phone;
+        document.getElementById('dob').textContent = profileData.dob;
+        document.getElementById('address').textContent = profileData.address;
+        document.getElementById('profilePicture').src = profileData.profilePicture;
+    } else {
+        alert('No profile data found!');
+        window.location.href = 'registration.html';
+    }
+</script>
+
+</body>
+</html>

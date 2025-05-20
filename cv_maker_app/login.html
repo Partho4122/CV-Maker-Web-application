@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, rgba(124, 58, 58, 0.7), rgba(214, 158, 158, 0.7)),
+                        url('back.png') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(128, 212, 149);
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-login {
+            background-color: blue;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background-color: darkblue;
+        }
+
+        .btn-back {
+            background-color: #f4f4f9;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .login-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            input[type="email"],
+            input[type="password"] {
+                font-size: 0.9em;
+            }
+
+            .btn {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                width: 100%;
+                padding: 10px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            input[type="email"],
+            input[type="password"] {
+                font-size: 0.8em;
+            }
+
+            .btn {
+                font-size: 0.8em;
+                padding: 7px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button class="btn btn-login" onclick="login()">Login</button>
+        <a href="home.html" class="btn btn-back">Back to Home</a>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (!password) {
+                alert("Please enter your password.");
+                return;
+            }
+
+            // If validation passes, redirect to cvtemplate.html
+            window.location.href = "cvtemplate.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Templates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* প্রতি লাইনে ৪টি কলাম */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .template {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .template:hover {
+            transform: scale(1.05);
+        }
+
+        .template img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .template-title {
+            margin-top: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Select Your CV Template</h1>
+        <div class="template-grid">
+            <!-- Template 1 -->
+            <div class="template" onclick="openTemplate(1)">
+                <a href="resume.html" class="btn btn-info">
+                    <img src="rifat.png" alt="template1">
+                </a>
+                <div class="template-title">Template 1</div>
+                <div class="edit">Edit</div>
+            </div>
+
+            <!-- Template 2 -->
+            <div class="template" onclick="openTemplate(2)">
+                <a href="temp2.html" class="btn btn-info">
+                    <img src="temp2.png" alt="template2">
+                </a>
+                <div class="template-title">Template 2</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 3 -->
+            <div class="template" onclick="openTemplate(3)">
+                <a href="resume3.html" class="btn btn-info">
+                    <img src="resume3.jpg" alt="template3">
+                </a>
+                <div class="template-title">Template 3</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 4 -->
+            <div class="template" onclick="openTemplate(4)">
+
+                <a href="temp3.html" class="btn btn-info">
+                    <img src="temp3.png" alt="template4">
+                </a>
+                <div class="template-title">Template 4</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 5 -->
+            <div class="template" onclick="openTemplate(5)">
+
+                <a href="resume5.html" class="btn btn-info">
+                    <img src="resume5.jpg" alt="template5">
+                </a>
+                <div class="template-title">Template 5</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 6 -->
+            <div class="template" onclick="openTemplate(6)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template6.png" alt="template6">
+                </a>
+                <div class="template-title">Template 6</div>
+                <div class="edit">Edit</div>
+            </div>
+
+            <!-- Template 7 -->
+            <div class="template" onclick="openTemplate(7)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template7.png" alt="template7">
+                </a>
+                <div class="template-title">Template 7</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 8 -->
+            <div class="template" onclick="openTemplate(8)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template8.png" alt="template8">
+                </a>
+
+                <div class="template-title">Template 8</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 9 -->
+            <div class="template" onclick="openTemplate(9)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template9.png" alt="template9">
+                </a>
+
+                <div class="template-title">Template 9</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 10 -->
+            <div class="template" onclick="openTemplate(10)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template10.png" alt="template10">
+                </a>
+
+                <div class="template-title">Template 10</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 11 -->
+            <div class="template" onclick="openTemplate(11)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template11.png" alt="template11">
+                </a>
+
+                <div class="template-title">Template 11</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 12 -->
+            <div class="template" onclick="openTemplate(12)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template12.png" alt="template12">
+                </a>
+
+                <div class="template-title">Template 12</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 13 -->
+            <div class="template" onclick="openTemplate(13)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template13.png" alt="template13">
+                </a>
+
+                <div class="template-title">Template 13</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 14 -->
+            <div class="template" onclick="openTemplate(14)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template14.png" alt="template14">
+                </a>
+
+                <div class="template-title">Template 14</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 15 -->
+            <div class="template" onclick="openTemplate(15)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template15.png" alt="template15">
+                </a>
+
+                <div class="template-title">Template 15</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 16 -->
+            <div class="template" onclick="openTemplate(16)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template16.png" alt="template16">
+                </a>
+
+                <div class="template-title">Template 16</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 17 -->
+            <div class="template" onclick="openTemplate(17)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template17.png" alt="template17">
+                </a>
+
+                <div class="template-title">Template 17</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 18 -->
+            <div class="template" onclick="openTemplate(18)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template18.png" alt="template18">
+                </a>
+
+                <div class="template-title">Template 18</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 19 -->
+            <div class="template" onclick="openTemplate(19)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template19.png" alt="template19">
+                </a>
+
+                <div class="template-title">Template 19</div>
+                <div class="edit">Edit</div>
+
+            </div>
+
+            <!-- Template 20 -->
+            <div class="template" onclick="openTemplate(20)">
+                <a href="createcv.html" class="btn btn-info">
+                    <img src="template20.png" alt="template20">
+                </a>
+                <div class="template-title">Template 20</div>
+                <div class="edit">Edit</div>
+
+
+            </div>
+        </div>
+        <a href="profile.php" class="back-btn"> See Profile</a>
+    </div>
+
+
+</body>
+
+</html>

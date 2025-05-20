@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            height: 100vh;
+            background: rgb(249, 249, 249);
+            background: radial-gradient(circle, rgba(249, 249, 249, 1) 0%, rgba(240, 232, 127, 1) 49%, rgba(246, 243, 132, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar bg-body-tertiary shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
+                CV Maker
+            </a>
+            <div>
+                <a href="profile.php" class="btn btn-sm btn-dark"><i class="bi bi-person-circle"></i> My Profile</a>
+                <a href="login.html" class="btn btn-sm btn-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="bg-white rounded shadow p-2 mt-4" style="min-height:80vh">
+            <div class="d-flex justify-content-between border-bottom">
+                <h5>Create Your CV</h5>
+                <div>
+                    <a href="" class="text-decoration-none"><i class="bi bi-arrow-left-circle"></i> Back</a>
+                </div>
+            </div>
+
+            <div>
+
+                <form class="row g-3 p-3" action="createcv.php" method="POST">
+                    <h5 class="mt-3 text-secondary"><i class="bi bi-person-badge"></i> Personal Information</h5>
+                    <div class="col-md-6">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="full_name" placeholder=" Full Name " class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" placeholder="rifat@abc.com" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Mobile No</label>
+                        <input type="number" name="mobile" min="0181333****" placeholder="0181*******" max="99999999999 " class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Date Of Birth</label>
+                        <input type="date" name="dob" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other's">Transgender</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label class="form-label">Religion</label>
+                        <select class="form-select" name="religion" required>
+                            <option value="Muslim">Muslim</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Sikh">Sikh</option>
+                            <option value="Christian">Christian</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label class="form-label">Nationality</label>
+                        <select class="form-select" name="nationality" required>
+                            <option value="Indian">Bangladeshi</option>
+                            <option value="Non Indian">Indian</option>
+                            <option value="Indian">USA</option>
+                            <option value="Non Indian">Bankok</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label class="form-label">Marital Status</label>
+                        <select class="form-select" name="marital_status" required>
+                            <option value="Married">Single</option>
+                            <option value="Single"> Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Hobbies</label>
+                        <input type="text" name="hobbies" placeholder="Reading Books, Watching Movies" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Languages Known</label>
+                        <input type="text" name="languages" placeholder="Bangla ,English,Hindi" class="form-control" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label"> Address</label>
+                        <input type="text" name="address" class="form-control" id="inputAddress" placeholder=" Please fill the Address" required>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <h5 class=" text-secondary"><i class="bi bi-briefcase"></i> Experience</h5>
+                        <div>
+                            <a href="" class="text-decoration-none"><i class="bi bi-file-earmark-plus"></i> Add New</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap">
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <div class="d-flex justify-content-between">
+                                    <h6>Web Developer Consultant (2+ Years)</h6>
+                                    <a href=""><i class="bi bi-x-lg"></i></a>
+                                </div>
+                                <p class="small text-secondary m-0"><i class="bi bi-buildings"></i> Narsingdi, Dhaka (October 2020 - Currently Pursuing)</p>
+                                <p class="small text-secondary m-0">Handling customers and fulfilling their needs</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <div class="d-flex justify-content-between">
+                                    <h6>Android  Developer Consultant (1+ Years)</h6>
+                                    <a href=""><i class="bi bi-x-lg"></i></a>
+                                </div>
+                                <p class="small text-secondary m-0"><i class="bi bi-buildings"></i> Narsingdi, Dhaka (October 2017 - 2018 - Currently Pursuing)</p>
+                                <p class="small text-secondary m-0">Handling customers and fulfilling their needs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <h5 class=" text-secondary"><i class="bi bi-journal-bookmark"></i> Education</h5>
+                        <div>
+                            <a href="expriance.html" class="text-decoration-none"><i class="bi bi-file-earmark-plus"></i> Add New</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap">
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <div class="d-flex justify-content-between">
+                                    <h6>Completed HSC  (Group)</h6>
+                                    <a href=""><i class="bi bi-x-lg"></i></a>
+                                </div>
+                                <p class="small text-secondary m-0"><i class="bi bi-book"></i> Central Board Of Secondary Education, Narsingdi ,Dhaka</p>
+                                <p class="small text-secondary m-0">Passed / Completed In 2023</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <div class="d-flex justify-content-between">
+                                    <h6>Completed University(BS.c in CSE) </h6>
+                                    <a href=""><i class="bi bi-x-lg"></i></a>
+                                </div>
+                                <p class="small text-secondary m-0"><i class="bi bi-book"></i> Central Bs.c in CSE , Dhaka Ashulia</p>
+                                <p class="small text-secondary m-0">Passed / Completed In 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <h5 class=" text-secondary"><i class="bi bi-laptop"></i> Skills</h5>
+                    </div>
+
+                    <div class="d-flex flex-wrap">
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <p>Web Development</p>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <p>Android app Development</p>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <p>UX/UI Design</p>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="p-2 border rounded">
+                                <p>Programming Leanusge and problem solving</p>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <a href="createcv.php" class="btn btn-info"><button type="submit" class="btn btn-primary">Submit</button></a>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB0sDpd14XAXN+PyL1zA10p9oJ8h0w/4w6WQIkv1Vsc3S5aa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-cu5zLZ9IHOw8XmjT+zvqVXrQ1z1SKCkhbVsyhY1BYkLgtH2qA4l7wyy87nPE+dQ6" crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>

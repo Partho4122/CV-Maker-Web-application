@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            height: 100vh;
+            background: rgb(249, 249, 249);
+            background: radial-gradient(circle, rgba(249, 249, 249, 1) 0%, rgba(240, 232, 127, 1) 49%, rgba(246, 243, 132, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg-white rounded shadow p-2 mt-4" style="min-height:80vh">
+            <div class="d-flex justify-content-between border-bottom">
+                <h5>Create Your CV</h5>
+            </div>
+
+            <form class="row g-3 p-3" action="createcv.php" method="POST">
+                <!-- Experience Section -->
+                <div class="d-flex justify-content-between">
+                    <h5 class=" text-secondary"><i class="bi bi-briefcase"></i> Experience</h5>
+                    <div>
+                        <a href="javascript:void(0)" class="text-decoration-none" onclick="addExperience()">
+                            <i class="bi bi-file-earmark-plus"></i> Add New
+                        </a>
+                    </div>
+                </div>
+
+                <div id="experience-container" class="d-flex flex-wrap">
+                    <!-- Experience will be added here -->
+                </div>
+
+                <hr>
+
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Add New Experience Function
+        function addExperience() {
+            // Clone the experience template
+            let experienceTemplate = document.createElement('div');
+            experienceTemplate.classList.add('col-12', 'col-md-6', 'p-2');
+            experienceTemplate.innerHTML = `
+                <div class="p-2 border rounded">
+                    <div class="d-flex justify-content-between">
+                        <h6>New Experience</h6>
+                        <a href="javascript:void(0)" onclick="removeExperience(this)">
+                            <i class="bi bi-x-lg"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <label class="form-label">Position</label>
+                        <input type="text" name="position[]" class="form-control" placeholder="Position" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Company</label>
+                        <input type="text" name="company[]" class="form-control" placeholder="Company" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Duration</label>
+                        <input type="text" name="duration[]" class="form-control" placeholder="e.g., Jan 2020 - Dec 2022" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Description</label>
+                        <textarea name="description[]" class="form-control" placeholder="Job description" rows="3" required></textarea>
+                    </div>
+                </div>
+            `;
+
+            // Append the new experience to the container
+            document.getElementById('experience-container').appendChild(experienceTemplate);
+        }
+
+        // Remove Experience Function
+        function removeExperience(element) {
+            // Remove the experience card
+            element.closest('.col-12').remove();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-cu5zLZ9IHOw8XmjT+zvqVXrQ1z1SKCkhbVsyhY1BYkLgtH2qA4l7wyy87nPE+dQ6" crossorigin="anonymous"></script>
+</body>
+
+</html>
